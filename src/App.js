@@ -16,7 +16,7 @@ function App() {
       <Timeline />
       <Produto />
       <Cases />
-
+      < Footer />
     </div>
   );
 }
