@@ -4,6 +4,7 @@ export default function Cases() {
 
     return (
         <React.Fragment>
-        </React.Fragment >
+
+        </React.Fragment>
     );
 }
