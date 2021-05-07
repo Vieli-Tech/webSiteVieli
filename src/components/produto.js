@@ -54,7 +54,6 @@ export default function Produto() {
                             <p>Relatórios com o histórico da performance da produção por máquina  e identificação dos maiores motivos de paradas e refugos, possibilitando a identificação dos motivos que geram baixa produtividade e gargalos.</p>
                             <h2>Fácil Interface para operador</h2>
                             <p>Possui tela TouchScreen para o operador, deixando simples e intuitiva a aplicação e interação com o usuário</p>
-                            <p>Especificacoes tecnicas (paraBNDES)</p>
                         </Paper>
                         <Box m={3}></Box>
                     </Grid>
