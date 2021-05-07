@@ -18,7 +18,9 @@ jobs:
     - name: Install Packages
       run: npm install
     - name: Deploy to GH Pages
-      run: npm run deploy
-    - name: Updating Domain
-      run: echo "Update domain"
+      run: |
+        git config --global user.email "your_github_email>"
+        git config --global user.name "your_github_username>"
+        git remote set-url origin https://7fc935a43975124b08156fcb2c90fffaa515cc3c@github.com/Vieli-Tech/webSiteVieli.git
+        npm run deploy
 

@@ -1,8 +1,8 @@
 {
-  "name": "vieliapp",
+  "name": "webSiteVieli",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://www.vielitech.com.br",
+  "homepage": "https://vieli-tech.github.io/webSiteVieli/",
   "dependencies": {
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
@@ -22,8 +22,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build && cp CNAME build/CNAME",
-    "deploy": "webSiteVieli -d build",
+    "predeploy": "npm run build",
+    "deploy": "webSiteVieli -d build"
   },
   "eslintConfig": {
     "extends": [
