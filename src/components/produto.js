@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
     },
     aponta: {
         margin: '20px 0px 0px 60px',
-        maxHeight: '35vw',
+        maxHeight: '33vw',
         minHeight: '200px',
         width: 'auto',
         borderRadius: '10%',
@@ -58,6 +58,7 @@ export default function Produto() {
                         <Box m={3}></Box>
                     </Grid>
                 </Grid>
+                <Box m={1} />
             </Grid>
         </React.Fragment>
     );

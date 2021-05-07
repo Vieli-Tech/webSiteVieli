@@ -36,7 +36,10 @@ export default function Footer() {
         <React.Fragment>
             <footer className={classes.footer}>
                 <Container>
-                    <Typography className={classes.info} variant="body1">VieliTech   ||   Rua Carlos Preissler, 245 - São Bento do Sul – SC   || <Link href="tel:+55-47-3635-5587" variant="inherit"> +55 (47) 3635-5587 </Link> || <Link href="mailto:contato@vielitech.com.br" variant="inherit">   Contato@vielitech.com.br</Link>
+                    <Typography className={classes.info} variant="body1">VieliTech   ||   Rua Carlos Preissler, 245 - São Bento do Sul – SC   ||
+                        <Link href="tel:+55-47-3635-5587" variant="inherit"> +55 (47) 3635-5587 </Link>
+                        ||
+                        <Link href="mailto:contato@vielitech.com.br" target="_blank" variant="inherit">   contato@vielitech.com.br</Link>
                     </Typography>
                     <Copyright />
                 </Container>

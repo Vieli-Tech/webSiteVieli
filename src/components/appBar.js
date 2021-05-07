@@ -1,15 +1,22 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+import {
+    makeStyles,
+    MenuItem,
+    IconButton,
+    Button,
+    AppBar,
+    Toolbar,
+    Typography,
+    Paper,
+    MenuList,
+    Popper,
+    Grow,
+    ClickAwayListener,
+} from '@material-ui/core';
 import styled from 'styled-components';
 import vieliLogoSM from '../resources/logo_SM_vieli.png'
-import { SocialIcon } from 'react-social-icons';
-
+import CallIcon from '@material-ui/icons/Call';
+import MailOutlineIcon from '@material-ui/icons/MailOutline';
 
 const StyledAppBar = styled(AppBar)`
   background-color: green;
@@ -21,6 +28,10 @@ const StyledAppBar = styled(AppBar)`
   }
 `;
 
+const StyledMenuItem = styled(MenuItem)`
+  padding: 0px 15px 0px 15px;
+  }
+`;
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
@@ -34,32 +45,95 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: '10px',
     },
     vielitech: {
-
+        color: 'white',
         fontWeight: 'bold',
     },
     linkedin: {
         width: "auto",
         height: "50%",
     },
+    paper: {
+        marginRight: theme.spacing(2),
+    },
 }));
 
 export default function AppTopBar(props) {
     const classes = useStyles();
+    const [open, setOpen] = React.useState(false);
+    const anchorRef = React.useRef(null);
+
+    const handleToggle = () => {
+        setOpen((prevOpen) => !prevOpen);
+    };
+
+    const handleClose = (event) => {
+        if (anchorRef.current && anchorRef.current.contains(event.target)) {
+            return;
+        }
+
+        setOpen(false);
+    };
+
+    function handleListKeyDown(event) {
+        if (event.key === 'Tab') {
+            event.preventDefault();
+            setOpen(false);
+        }
+    }
+
+    // return focus to the button when we transitioned from !open -> open
+    const prevOpen = React.useRef(open);
+    React.useEffect(() => {
+        if (prevOpen.current === true && open === false) {
+            anchorRef.current.focus();
+        }
+
+        prevOpen.current = open;
+    }, [open]);
 
     return (
         <StyledAppBar position="fixed"
         >
             <Toolbar>
                 <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-                    <MenuIcon />
+                    {/* <MenuIcon /> */}
                 </IconButton>
                 <img src={vieliLogoSM} height="35" />
                 <Typography variant="h6" className={classes.title}>
                     <span className={classes.vielitech} >VieliTech</span>
                 </Typography>
-                {/* <Button color="inherit">Login</Button> */}
-                {/* <SocialIcon className={classes.linkedin} url="https://linkedin.com/company/vielitech" bgColor="white" /> */}
-            </Toolbar>
-        </StyledAppBar>
+                <Button
+                    ref={anchorRef}
+                    aria-controls={open ? 'menu-list-grow' : undefined}
+                    aria-haspopup="true"
+                    onClick={handleToggle}
+                >
+                    <span className={classes.vielitech} >Contato</span>
+                </Button>
+                <Popper open={open} anchorEl={anchorRef.current} role={undefined} transition disablePortal>
+                    {({ TransitionProps, placement }) => (
+                        <Grow
+                            {...TransitionProps}
+                            style={{ transformOrigin: placement === 'bottom' ? 'center top' : 'center bottom' }}
+                        >
+                            <Paper>
+                                <ClickAwayListener onClickAway={handleClose}>
+                                    <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown} style={{ padding: '0px' }} >
+                                        <StyledMenuItem onClick={handleClose}>
+                                            <CallIcon />
+                                            <h5>  +55 (47) 3635-5587 </h5>
+                                        </StyledMenuItem>
+                                        <StyledMenuItem onClick={handleClose}>
+                                            <MailOutlineIcon />
+                                            <h5> contato@vielitech.com.br </h5>
+                                        </StyledMenuItem>
+                                    </MenuList>
+                                </ClickAwayListener>
+                            </Paper>
+                        </Grow>
+                    )}
+                </Popper>
+            </Toolbar >
+        </StyledAppBar >
     );
 }
