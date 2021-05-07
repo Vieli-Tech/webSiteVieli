@@ -8,6 +8,7 @@ import {
     Toolbar,
     Typography,
     Paper,
+    Link,
     MenuList,
     Popper,
     Grow,
@@ -17,6 +18,7 @@ import styled from 'styled-components';
 import vieliLogoSM from '../resources/logo_SM_vieli.png'
 import CallIcon from '@material-ui/icons/Call';
 import MailOutlineIcon from '@material-ui/icons/MailOutline';
+import WhatsAppIcon from '@material-ui/icons/WhatsApp';
 
 const StyledAppBar = styled(AppBar)`
   background-color: green;
@@ -29,7 +31,7 @@ const StyledAppBar = styled(AppBar)`
 `;
 
 const StyledMenuItem = styled(MenuItem)`
-  padding: 0px 15px 0px 15px;
+  padding: 0px 20px 0px 20px;
   }
 `;
 const useStyles = makeStyles((theme) => ({
@@ -98,7 +100,7 @@ export default function AppTopBar(props) {
                 <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
                     {/* <MenuIcon /> */}
                 </IconButton>
-                <img src={vieliLogoSM} height="35" />
+                <img alt='logo' src={vieliLogoSM} height="35" />
                 <Typography variant="h6" className={classes.title}>
                     <span className={classes.vielitech} >VieliTech</span>
                 </Typography>
@@ -118,14 +120,18 @@ export default function AppTopBar(props) {
                         >
                             <Paper>
                                 <ClickAwayListener onClickAway={handleClose}>
-                                    <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown} style={{ padding: '0px' }} >
+                                    <MenuList autoFocusItem={open} id="menu-list-grow" onKeyDown={handleListKeyDown} style={{ padding: '20px 0px 20px 0px' }} >
                                         <StyledMenuItem onClick={handleClose}>
-                                            <CallIcon />
-                                            <h5>  +55 (47) 3635-5587 </h5>
+                                            <WhatsAppIcon />
+                                            <a target='blank' href='https://wa.me/554788169230' color='white'>  WhatsApp </a>
                                         </StyledMenuItem>
                                         <StyledMenuItem onClick={handleClose}>
                                             <MailOutlineIcon />
                                             <h5> contato@vielitech.com.br </h5>
+                                        </StyledMenuItem>
+                                        <StyledMenuItem onClick={handleClose}>
+                                            <CallIcon />
+                                            <Typography variant='body2'> +55 (47) 3635-5587 </Typography>
                                         </StyledMenuItem>
                                     </MenuList>
                                 </ClickAwayListener>

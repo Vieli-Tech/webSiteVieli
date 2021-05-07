@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: '5em',
         marginBottom: '3em',
         width: '50vw',
+        minWidth: '450px',
         height: 'auto',
     },
 }));
