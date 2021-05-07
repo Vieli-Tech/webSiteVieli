@@ -3,21 +3,14 @@ import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeli
 import 'react-vertical-timeline-component/style.min.css';
 
 import Data from '../data/timelineData'
-import { Typography, Paper, Grid, makeStyles, CardMedia } from '@material-ui/core';
+import { Typography, Grid, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
     },
-    paper: {
-        height: 140,
-        width: 100,
-    },
-    control: {
-        padding: theme.spacing(2),
-    },
     textBox: {
-        textAlign: "left",
+        textAlign: "center",
     }
 }));
 
@@ -25,10 +18,13 @@ export default function Timeline() {
     const classes = useStyles();
     return (
         <React.Fragment>
-            <div style={{ backgroundColor: "lightgreen" }}>
-                <VerticalTimeline >
+            <div style={{ backgroundColor: "lightgray" }}>
+                <VerticalTimeline
+                    layout='2-columns'
+                >
                     {Data.map((e) =>
                         <VerticalTimelineElement
+                            style={{ padding: '5px' }}
                             className="vertical-timeline-element--work"
                             contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                             contentArrowStyle={{ borderRight: '17px solid  rgb(33, 150, 243)' }}
@@ -39,16 +35,16 @@ export default function Timeline() {
                             <h3 className="vertical-timeline-element-title" style={{ fontSize: "22px" }} >{e.date}</h3>
                             <h4 className="vertical-timeline-element-subtitle"></h4>
                             <Grid container className={classes.root} spacing={3}>
-                                <Grid item xs={6}>
+                                <Grid item xs={12}>
                                     <Grid item>
-                                        <Typography className={classes.textBox} variant="subtitle2" style={{ padding: "15px" }}> {e.text}</Typography>
+                                        <Typography className={classes.textBox} variant="h7" style={{ paddingTop: "15px" }}> {e.text}</Typography>
                                     </Grid>
                                 </Grid>
-                                <Grid item xs={6}>
+                                {/* <Grid item xs={6}>
                                     <Grid item>
-                                        <img src={e.image} style={{ maxHeight: "150px", maxWidth: "200px" }} />
+                                        <img src={e.image} style={{ maxHeight: "120px", maxWidth: "200px", alignItems: 'center' }} />
                                     </Grid>
-                                </Grid>
+                                </Grid> */}
                             </Grid>
                         </VerticalTimelineElement>
                     )}

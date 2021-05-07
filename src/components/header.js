@@ -1,17 +1,16 @@
 import React from 'react';
 
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Typography from '@material-ui/core/Typography';
-import Container from '@material-ui/core/Container';
+import { Grid } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import fundo1 from '../resources/fundo1.png'
 import vieliLogoXL from '../resources/logo_XL_vieli.png'
-import { green } from '@material-ui/core/colors';
 
 const useStyles = makeStyles((theme) => ({
     logoXL: {
-        marginTop: '130px',
-        height: '30em',
+        padding: '6px',
+        marginTop: '5em',
+        marginBottom: '3em',
+        width: '50vw',
+        height: 'auto',
     },
 }));
 
@@ -20,12 +19,11 @@ export default function He() {
 
     return (
         <React.Fragment>
-            <CssBaseline />
-            <Container maxWidth="m">
-                <div style={{ textAlign: "center" }}>
+            <Grid container justify='center' maxWidth='lg'>
+                <Grid item >
                     <img className={classes.logoXL} src={vieliLogoXL} />
-                </div>
-            </Container>
+                </Grid>
+            </Grid>
         </React.Fragment >
     );
 }
