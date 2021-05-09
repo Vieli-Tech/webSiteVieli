@@ -127,11 +127,11 @@ export default function AppTopBar(props) {
                                         </StyledMenuItem>
                                         <StyledMenuItem onClick={handleClose}>
                                             <MailOutlineIcon />
-                                            <h5> contato@vielitech.com.br </h5>
+                                            <Link href="mailto:contato@vielitech.com.br" target="_blank" variant="inherit" style={{ padding: '15px 0px 15px 0px' }}>   contato@vielitech.com.br</Link>
                                         </StyledMenuItem>
                                         <StyledMenuItem onClick={handleClose}>
                                             <CallIcon />
-                                            <Typography variant='body2'> +55 (47) 3635-5587 </Typography>
+                                            <Link href="tel:+55-47-3635-5587" variant="inherit"> +55 (47) 3635-5587 </Link>
                                         </StyledMenuItem>
                                     </MenuList>
                                 </ClickAwayListener>

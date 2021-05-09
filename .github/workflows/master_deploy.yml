@@ -10,7 +10,7 @@ jobs:
       matrix:
         node-version: [8.x, 10.x, 12.x]
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
@@ -19,8 +19,8 @@ jobs:
       run: npm install
     - name: Deploy to GH Pages
       run: |
-        git config --global user.email "your_github_email>"
-        git config --global user.name "your_github_username>"
-        git remote set-url origin https://7fc935a43975124b08156fcb2c90fffaa515cc3c@github.com/Vieli-Tech/webSiteVieli.git
+        git config --global user.email ${GIT_EMAIL}
+        git config --global user.name ${GIT_USER}
+        git remote set-url origin https://${{ secrets.TOKEN }}@github.com/Vieli-Tech/webSiteVieli.git
         npm run deploy
 
