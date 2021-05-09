@@ -5,6 +5,8 @@ import fabrica from '../resources/fabrica.png'
 
 const useStyles = makeStyles((theme) => ({
     root: {
+        borderColor: '#F0F0F0',
+        borderTopStyle: 'double',
         flexGrow: 1,
         paddingRight: '4vw',
         paddingLeft: '9vw',

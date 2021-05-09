@@ -1,8 +1,8 @@
 import React from 'react';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
-
 import Data from '../data/timelineData'
+import fundo from '../resources/fundo1.png'
 import { Typography, Grid, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
@@ -18,7 +18,7 @@ export default function Timeline() {
     const classes = useStyles();
     return (
         <React.Fragment>
-            <div style={{ backgroundColor: "lightgray" }}>
+            <div style={{ backgroundColor: '#F3F3F3' }}>
                 <VerticalTimeline
                     layout='2-columns'
                 >
@@ -28,7 +28,6 @@ export default function Timeline() {
                             className="vertical-timeline-element--work"
                             contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                             contentArrowStyle={{ borderRight: '17px solid  rgb(33, 150, 243)' }}
-                            // date={e.date}
                             iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff', textAlign: "center", padding: "5px" }}
                             icon={<img src={e.icon} style={{ height: "70%", marginTop: "5px" }} />}
                         >
@@ -40,11 +39,6 @@ export default function Timeline() {
                                         <Typography className={classes.textBox} variant="h7" style={{ paddingTop: "15px" }}> {e.text}</Typography>
                                     </Grid>
                                 </Grid>
-                                {/* <Grid item xs={6}>
-                                    <Grid item>
-                                        <img src={e.image} style={{ maxHeight: "120px", maxWidth: "200px", alignItems: 'center' }} />
-                                    </Grid>
-                                </Grid> */}
                             </Grid>
                         </VerticalTimelineElement>
                     )}
