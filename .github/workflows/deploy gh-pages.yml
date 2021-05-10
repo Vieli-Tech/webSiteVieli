@@ -37,4 +37,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
           cname: vielitech.com.br
-          force_orphan: true
+          commit_message: ${{ github.event.head_commit.message }}
+
