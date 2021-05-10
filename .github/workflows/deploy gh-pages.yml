@@ -14,9 +14,21 @@ jobs:
         with:
           node-version: '12.x'
 
-      - name: Clean install dependencies and build
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Clean node_modules directory
+        run: rm -rf *
+        working-directory: ./node_modules
+
+      - name: install and build
         run: |
-          npm ci
+          npm install
           npm run build
 
       - name: Deploy
