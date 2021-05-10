@@ -23,8 +23,8 @@ jobs:
             ${{ runner.os }}-node-
 
       - name: Clean node_modules directory
-        run: rm -rf *
-        working-directory: ./node_modules
+        run: rm -rf node_modules
+        working-directory: ./
 
       - name: install and build
         run: |
