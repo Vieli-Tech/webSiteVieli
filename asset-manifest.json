@@ -1,33 +1,34 @@
 {
   "files": {
     "main.css": "/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/static/js/main.06f81b2d.chunk.js",
-    "main.js.map": "/static/js/main.06f81b2d.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.93ae22a8.js",
-    "runtime-main.js.map": "/static/js/runtime-main.93ae22a8.js.map",
+    "main.js": "/static/js/main.5755afbc.chunk.js",
+    "main.js.map": "/static/js/main.5755afbc.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.57eb95f5.js",
+    "runtime-main.js.map": "/static/js/runtime-main.57eb95f5.js.map",
     "static/css/2.2aa38b9c.chunk.css": "/static/css/2.2aa38b9c.chunk.css",
-    "static/js/2.48aa419f.chunk.js": "/static/js/2.48aa419f.chunk.js",
-    "static/js/2.48aa419f.chunk.js.map": "/static/js/2.48aa419f.chunk.js.map",
-    "static/js/3.b2c89234.chunk.js": "/static/js/3.b2c89234.chunk.js",
-    "static/js/3.b2c89234.chunk.js.map": "/static/js/3.b2c89234.chunk.js.map",
+    "static/js/2.a3ee1a00.chunk.js": "/static/js/2.a3ee1a00.chunk.js",
+    "static/js/2.a3ee1a00.chunk.js.map": "/static/js/2.a3ee1a00.chunk.js.map",
+    "static/js/3.d2d87a49.chunk.js": "/static/js/3.d2d87a49.chunk.js",
+    "static/js/3.d2d87a49.chunk.js.map": "/static/js/3.d2d87a49.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.2aa38b9c.chunk.css.map": "/static/css/2.2aa38b9c.chunk.css.map",
     "static/css/main.6dea0f05.chunk.css.map": "/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.48aa419f.chunk.js.LICENSE.txt": "/static/js/2.48aa419f.chunk.js.LICENSE.txt",
+    "static/js/2.a3ee1a00.chunk.js.LICENSE.txt": "/static/js/2.a3ee1a00.chunk.js.LICENSE.txt",
     "static/media/apontamento.e0d25148.jpg": "/static/media/apontamento.e0d25148.jpg",
     "static/media/dashboard.38a7fdaa.png": "/static/media/dashboard.38a7fdaa.png",
     "static/media/fabrica.7ada7bcc.png": "/static/media/fabrica.7ada7bcc.png",
     "static/media/fundo1.aa2b836f.png": "/static/media/fundo1.aa2b836f.png",
+    "static/media/img_cartao_BNDES.de480627.jpg": "/static/media/img_cartao_BNDES.de480627.jpg",
     "static/media/logo_SM_vieli.84cf294d.png": "/static/media/logo_SM_vieli.84cf294d.png",
     "static/media/logo_XL_vieli.21289b90.png": "/static/media/logo_XL_vieli.21289b90.png",
     "static/media/plc300.5d0e09e7.png": "/static/media/plc300.5d0e09e7.png",
     "static/media/totem.3909620f.png": "/static/media/totem.3909620f.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.93ae22a8.js",
+    "static/js/runtime-main.57eb95f5.js",
     "static/css/2.2aa38b9c.chunk.css",
-    "static/js/2.48aa419f.chunk.js",
+    "static/js/2.a3ee1a00.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.06f81b2d.chunk.js"
+    "static/js/main.5755afbc.chunk.js"
   ]
 }
