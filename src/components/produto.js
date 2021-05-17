@@ -1,7 +1,8 @@
 import React from 'react';
-import { Grid, Paper, Box } from '@material-ui/core';
+import { Grid, Paper, Box, Avatar, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import aponta from '../resources/apontamento.jpg';
+import cartaoBNDES from '../resources/img_cartao_BNDES.jpg';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -26,6 +27,14 @@ const useStyles = makeStyles((theme) => ({
         minHeight: '200px',
         width: 'auto',
         borderRadius: '10%',
+    },
+    Img_Cartao: {
+        borderRadius: '0%',
+        width: '10vw',
+        minWidth: '110px',
+        height: 'auto',
+        float: 'right',
+
     },
 }));
 
@@ -54,12 +63,21 @@ export default function Produto() {
                             <p>Relatórios com o histórico da performance da produção por máquina  e identificação dos maiores motivos de paradas e refugos, possibilitando a identificação dos motivos que geram baixa produtividade e gargalos.</p>
                             <h2>Fácil Interface para operador</h2>
                             <p>Possui tela TouchScreen para o operador, deixando simples e intuitiva a aplicação e interação com o usuário</p>
+                            <Box m={3} />
+                            <Grid container wrap="nowrap" spacing={1} xs={12} sm={12} direction="row" justify="flex-end" alignItems="start">
+                                <Grid item xs={12} sm={12}  >
+                                    <Avatar className={classes.Img_Cartao} src={cartaoBNDES} />
+                                </Grid>
+                                <Grid item xs={6} sm={6}>
+                                    <Typography variant='body2' style={{ fontWeight: 'bold' }}>Produto habilitado para compra atravé do cartão BNDES</Typography>
+                                </Grid>
+                            </Grid>
                         </Paper>
                         <Box m={3}></Box>
                     </Grid>
+                    <Box m={1} />
                 </Grid>
-                <Box m={1} />
             </Grid>
-        </React.Fragment>
+        </React.Fragment >
     );
 }
