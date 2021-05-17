@@ -69,7 +69,7 @@ export default function Produto() {
                                     <Avatar className={classes.Img_Cartao} src={cartaoBNDES} />
                                 </Grid>
                                 <Grid item xs={6} sm={6}>
-                                    <Typography variant='body2' style={{ fontWeight: 'bold' }}>Produto habilitado para compra atravé do cartão BNDES</Typography>
+                                    <Typography variant='body2' style={{ fontWeight: 'bold' }}>Produto habilitado para compra através do cartão BNDES</Typography>
                                 </Grid>
                             </Grid>
                         </Paper>
